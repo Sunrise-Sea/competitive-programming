@@ -1,0 +1,120 @@
+/* 
+Time complexity 
+is very important in CP, DSA and interviews too
+
+Important questions regarding in time complexity will be asked anywhere not only in CP
+elementary operations
+big o notation
+evaluate tc(time complexity) of an algorithm
+
+Elementary operations : - 
+
+Some operation that takes a constant amount of time 
+eg Arithemetic operations
+comparison of primitive data types (int float char,etc) (a==b, a>b a<b,etc)
+input and output of primitive data types (int float char, etc)
+
+Note : - 10 ^8 elementary operations almost equal to 1 second of time
+Hence say we have 100 elementary operations
+we say O(100) time taken
+constant time basically means - 1 elementary operation
+primitive data types and the specified operations are the key things
+
+time complexity is the function used to describe the approximate amount of time operations an algorithm requires for the given input
+We can calculate approximate time of execution of the code using time complexity and constraints
+
+if it depends on some ceratain n;
+then we say O(n)
+
+calculating time complexity 
+time complexity is a function after all
+TC = O(n^2)
+
+inputs 
+constraints
+3 ways : -
+atleast - lowest amount of elementary operations n^2
+atmost - highest amount of elementary operations n
+average - self - explanatory 
+n^2 =>
+for (int i <n){
+    for (int i<n){
+        if (rand==10){// say some random function has 10 and it gave it in the beginning (lucky) then only one operations
+            // break out of everything
+        }
+        // elementary operations
+    }
+}
+which means atleast = 1 operation
+and atmost = n^2 operations // in the case we didn't get 10 from rand
+average = (n^2 + 1 )/2
+
+
+3 notations : - 
+
+Big O notation { O(n)} - worst/atmost/upperbound
+Thetha notation - average/ middle --> conventional symbol
+Omega notation - atleast/best / lower bound --> conventional symbol
+operations
+
+Big O notation complexity graph - look at it from the slides 
+
+Reporting time complexity : - 
+
+Should not have constants
+O(N+K) (say a loop with N operations and K operations separately) only ignore K (constant) if it is relatively small
+we still report it as O(N)
+
+Should not have constant factors
+O(N/2) ==> O(N)
+
+Only include the fastest growing function for each variable : - 
+O(N^2 + N) ==> O(N^2)
+
+Can never be 0 : - 
+has to have atleast 1 elementary operations
+
+O(1)
+
+
+M is not constant
+2N^2 + 4N + 4(M^3+5) + 10 ==>N^2 + N + M^3 --> O(N^2 + M^3)
+
+
+N + NM^2 + M^2N + M --> MN^2 + NM^2
+N^3/64 + 20 N + (32NM)^2 --> N^3 + N^2M^2
+
+calculate tc of an algorithm depends on
+loops
+stl
+recursion
+
+example ->
+for(int i = 1; i<n; i*=2){
+    //elementary operation
+}
+hence it is O(log base 2 of n)
+because 1 2 4 ... <n roughly log base 2 of n elementary operations
+expected time complexity cheatsheet
+
+points to note : - 
+identify variables that contribute to time complexity
+just because constraints allow slower solutions, doesn't optimise 
+For n = 1000; both O(n^2) and O(n) will work
+The constants and constant factors removed from the TC removed when calculating big-O still matter to the computer
+since they're not deleted from the computer we just negated it in theory and representation
+
+test cases matter unless there's a limit explicitly imposed in the constraints
+
+example : - 
+test file in every test 
+1s - 10^8
+2s - 2 x 10^8
+and inside every test file it has number of 'test cases' (the variable t for test cases) say max test cases 10^4
+hence operations per test case allowed = 2x 10^8/10^4
+2 x 10^4
+but the solution is O(nlogn) {problem name 1914/D, three activities}
+and it works!
+since the constraint is sum of n over all test cases in each test file is given as less than 10^5 
+hence it works as sum of n<10^5 means 10^8 operations hence it works
+hence this point means that in the question it said to worry about the test file NOT the test cases

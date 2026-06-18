@@ -1,0 +1,16 @@
+Modulo operator is mainly used to 'reset' something back
+for example 12%3 = 0
+13%3 = 1
+14 %3 = 2
+15 %3 = 0
+hence we reset it again
+
+
+Modular addition 
+(A+B)%M = (A%M + B%M)%M 
+you can prove it using M * (something) + remainder
+Modular subtraction
+(A-B)%M = ((A%M - B%M) + M)%M
+prove it again using the usual constraints in r1 and r2 
+(A*B)%M = ((A%M)*(B%M))%M
+example - 100! can be used hence use this for 1%M * 2%M ...
