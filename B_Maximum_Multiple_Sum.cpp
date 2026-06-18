@@ -8,14 +8,6 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t,n,k;
-    cin>>t;
-    for (int i = 0; i < t; i++)
-    {
-        cin>>n>>k;
-        cout<<k*(n-1)+1<<"\n";
-
-    }
     
 
     return 0;

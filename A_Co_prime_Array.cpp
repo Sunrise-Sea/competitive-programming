@@ -19,6 +19,41 @@ int main()
     }
     for (int j = 1; j < n; j++)
     {
+        if (gcd(co_array[j], co_array[j - 1]) != 1)
+        {
+            if (co_array[j - 1] > co_array[j])
+            {
+                for (int k = co_array[j - 1]; k > co_array[j]; k--)
+                {
+                    if (gcd(co_array[j - 1], k) == 1 && gcd(co_array[j], k) == 1)
+                    {
+                        ops++;
+                        break;
+                    }
+                }
+            }
+            else if (co_array[j - 1] == co_array[j])
+            {
+                ops++;
+            }
+
+            else
+            {
+                for (int k = co_array[j - 1]; k < co_array[j]; k++)
+                {
+                    if (gcd(co_array[j - 1], k) == 1 && gcd(co_array[j], k) == 1)
+                    {
+                        ops++;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    cout << ops << "\n";
+    for (int j = 1; j < n; j++)
+    {
+
         cout << co_array[j - 1] << " ";
         if (gcd(co_array[j], co_array[j - 1]) != 1)
         {
@@ -29,10 +64,13 @@ int main()
                     if (gcd(co_array[j - 1], k) == 1 && gcd(co_array[j], k) == 1)
                     {
                         cout << k << " ";
-                        ops++;
                         break;
                     }
                 }
+            }
+            else if (co_array[j - 1] == co_array[j])
+            {
+                cout << co_array[j - 1] - 1 << " ";
             }
             else
             {
@@ -41,13 +79,13 @@ int main()
                     if (gcd(co_array[j - 1], k) == 1 && gcd(co_array[j], k) == 1)
                     {
                         cout << k << " ";
-                        ops++;
                         break;
                     }
                 }
             }
         }
     }
+
     cout << co_array[n - 1] << " ";
 
     return 0;
