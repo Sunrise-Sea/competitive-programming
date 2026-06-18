@@ -6,35 +6,49 @@ int index_return(string s, char capital)
 {
     if ((int)s.find(capital) == -1 || (int)s.find(capital + 32) == -1)
     {
-        return max((int)s.find(capital), (int)s.find((char)(capital + 32)));
+        return max((int)s.find(capital), (int)s.find((char)((int)capital + 32)));
     }
+    else
+    {
 
-    return min((int)s.find(capital), (int)s.find((char)(capital + 32)));
+        return min((int)s.find(capital), (int)s.find((char)((int)capital + 32)));
+    }
 }
 int main()
 {
-    int t;
-    int n;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t, n;
     string s;
     int counter = 0;
-    char letter_ind[4];
-    char temp_letter_ind[4];
-    char ch_ind[4] = {'M', 'E', 'O', 'W'};
+    char letter_ind[4], temp_letter_ind[4], ch[4] = {'M', 'E', 'O', 'W'};
     cin >> t;
     for (int i = 1; i <= t; i++)
     {
         cin >> n;
         cin >> s;
         counter = 0;
-        for (int i = 0; i < n; i++)
+        for (int k = 0; k < 4; k++)
         {
-            /* code */
+            letter_ind[k] = index_return(s, ch[k]);
+            // cout << index_return(s, ch[k]) << " ";
         }
-        
 
-        for (int j = 0; j < n; j++)
+        if (n < 4)
         {
-            if (s[j] == 'm' || s[j] == 'M')
+            cout << "NO" << endl;
+        }
+
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}
+// cout << "YES" << endl;
+// else if (counter == n && (le_m <= le_e) && (le_e <= le_o) && (le_o <= le_w))
+/*             if (s[j] == 'm' || s[j] == 'M')
             {
                 te_m = j;
                 if (le_m == te_m || te_m == le_m + 1)
@@ -73,22 +87,4 @@ int main()
             else
             {
                 break;
-            }
-        }
-        if (n < 4)
-        {
-            cout << "NO" << endl;
-        }
-
-        else if (counter == n && (le_m <= le_e) && (le_e <= le_o) && (le_o <= le_w))
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-    }
-
-    return 0;
-}
+            } */
