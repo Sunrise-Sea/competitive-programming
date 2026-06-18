@@ -14,3 +14,11 @@ Modular subtraction
 prove it again using the usual constraints in r1 and r2 
 (A*B)%M = ((A%M)*(B%M))%M
 example - 100! can be used hence use this for 1%M * 2%M ...
+
+gcd;
+
+when we subtract the two numbers of which we are taking the gcd, then the gcd remains same
+can be proved by usual means
+
+lcd and gcd is associative in nature
+gcd (a,b) <= min(a,b)
