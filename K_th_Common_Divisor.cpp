@@ -9,15 +9,10 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+    int a, b, k;
+    cin >> a >> b >> k;
+    for (int i = gcd(a, b); i >= 1; i--)
     {
-        cin >> n;
-        for (int i = 2; i <= n; i++)
-        {
-            
-        }
         
     }
 

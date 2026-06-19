@@ -3,23 +3,27 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
 
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n;
-    cin >> t;
-    for (int i = 0; i < t; i++)
+    int n;
+    while (true)
     {
-        cin >> n;
-        for (int i = 2; i <= n; i++)
+        cin>>n;
+        if (n == 42)
         {
-            
+            break;
+        }
+        else
+        {
+            cout<<n<<"\n";
         }
         
+        
     }
+    
 
     return 0;
 }
