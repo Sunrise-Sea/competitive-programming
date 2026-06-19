@@ -9,16 +9,19 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n;
+    int t, a, b;
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        cin >> n;
-        for (int i = 1; i <= n; i++)
+        cin >> a >> b;
+        if (a % b == 0)
         {
-            
+            cout << 0 << "\n";
         }
-        
+        else
+        {
+            cout << b - a % b << "\n";
+        }
     }
 
     return 0;
