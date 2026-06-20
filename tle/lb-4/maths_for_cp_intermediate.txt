@@ -1,0 +1,10 @@
+importance of primes : - 
+1e9 + 7 is: - 
+visibly very large number
+prime in nature
+
+
+Hashing : - It is a fundamental technique in Cp that is used to efficiently manipulate and process large amounts of 
+data Basically this hleps control overflow and maintain answers within a specific range defined by Modulo M belonging to [0,M-1]
+
+Some question may ask us to print answer modulo 1e9 + 7
