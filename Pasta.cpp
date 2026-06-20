@@ -20,14 +20,15 @@ int main(){
     {
         cin>>planned_length[j];
     }
+    // n m both have 1000 constraint hence 10^6 is not that bad
     for (int k = 0; k < m; k++)
     {
         for (int l = 0; l < n; l++)
         {
             if (planned_length[k]==noodle_length[l])
             {
-                planned_length[k] = -1;
-                noodle_length[l] = -1;
+                planned_length[k] = -2;// just for good measure
+                noodle_length[l] = -1; // eliminate the possibility for finding another noodle >:3
                 days_done++;
                 break;
             }
