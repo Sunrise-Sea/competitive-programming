@@ -28,7 +28,7 @@ int main(){
             if (planned_length[k]==noodle_length[l])
             {
                 planned_length[k] = -2;// just for good measure
-                noodle_length[l] = -1; // eliminate the possibility for finding another noodle >:3
+                noodle_length[l] = -1; // eliminate the possibility for finding another noodle > :3
                 days_done++;
                 break;
             }
