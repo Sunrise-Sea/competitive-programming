@@ -8,3 +8,26 @@ Hashing : - It is a fundamental technique in Cp that is used to efficiently mani
 data Basically this hleps control overflow and maintain answers within a specific range defined by Modulo M belonging to [0,M-1]
 
 Some question may ask us to print answer modulo 1e9 + 7
+
+We hash because say we have an answer 123456
+and cf intends us to print answer modulo 103
+hence we print 123456 % 103 = 62
+hence 62 is mapped to 123456 to 62
+
+but the problem is 123559 could also yeild 62
+which is why we choose a big prime number which is 1e9 + 7
+because it offers a greater range over which numbers can be mapped similarly 1e9 + 11 
+this storing of answer in terms of this thing is hashing
+
+mathematical view : - 
+what is probability of clashing values say a,b are values
+answer is only one
+a%M belongs to 0 to M-1 and b%M belongs to 0 to M-1
+
+hence 1/M --> hence M is big (1e9 + 7) hence probability is very small now
+hence mapping 0 to 1e9 + 6 to numbers makes us able to clash very less because the primes follow a very irregular pattern, hence very 
+low probability of a number to be just a multiple of prime (if the prime is big enough like 1e9+7)
+and multiples of large prime numbers is also a very low possibility eg 1e9 + 7
+
+collision clash means say a!=b but a%m =h1 and b%m = h2 and h1==h2 hence it is a collision clash
+hence whatever was the m was being used for hashing is BAD
