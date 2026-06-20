@@ -42,3 +42,10 @@ instead do i*i <=n REMEMBER YOU ARE ALLOWED FOR ANY CONDITION OF I DO NOT LIMIT 
 
 
 Trial division method for prime factorization of a number
+ Composite
+    ^
+    |
+    |
+N = A  x B --> prime
+    |------|
+Composite<-CxD--> prime
