@@ -39,3 +39,6 @@ or 998244353
 NEVER USE SQRT FUNCTION IF POSSIBLE NOT TO OR YOU WILL LOSE PRECISION SINCE IT'S A FLOAT
 say i< (ceil or whatever stuff you do for prime)
 instead do i*i <=n REMEMBER YOU ARE ALLOWED FOR ANY CONDITION OF I DO NOT LIMIT YOURSELF
+
+
+Trial division method for prime factorization of a number
