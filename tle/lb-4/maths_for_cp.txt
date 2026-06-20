@@ -23,3 +23,6 @@ can be proved by usual means
 lcd and gcd is associative in nature gcd (a,b,c...) = gcd(a,gcd(b,gcd(c...))) similar for lcm
 gcd (a,b) <= min(a,b)
 a, a+1 are coprime because if a|2 a+1 won't divide 2 same with any other number else it will have to be that number apart in order to do that
+
+if there are very low test cases (from the perspective of a problem setter)
+then there MUST be a trick to it because else you would have found the answer just by looking at the test cases

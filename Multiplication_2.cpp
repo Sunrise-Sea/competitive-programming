@@ -30,18 +30,18 @@ int main()
     {
         cout << 0 << "\n";
     }
-
+// break the conditions into parts (log) log () + log() --> product
     else
     {
         for (int j = 0; j < n; j++)
         {
-            product *= multi_2[j];
-            if (product*=multi_2[j] > (ll)pow(10, 18))
+            if ((int)log10(product)+(int)log10(multi_2[j]) > 18)
             {
                 cout << -1 << "\n";
                 break_flag = 1;
                 break;
             }
+            product *= multi_2[j];
         }
         if (!break_flag)
         {
