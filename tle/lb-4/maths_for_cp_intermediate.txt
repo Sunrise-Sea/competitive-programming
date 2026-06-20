@@ -49,3 +49,10 @@ Trial division method for prime factorization of a number
 N = A  x B --> prime
     |------|
 Composite<-CxD--> prime
+
+
+Best TC and Worst TC in trial division method
+Worst is obviously O( root of n)
+Best is roughly log2(n) because it is always dominating all the greater prime factors
+hence log2(n) roughly equal to the TC
+Review this class again
