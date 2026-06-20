@@ -30,4 +30,12 @@ low probability of a number to be just a multiple of prime (if the prime is big 
 and multiples of large prime numbers is also a very low possibility eg 1e9 + 7
 
 collision clash means say a!=b but a%m =h1 and b%m = h2 and h1==h2 hence it is a collision clash
-hence whatever was the m was being used for hashing is BAD
+hence whatever was the m was being used for hashing function is BAD
+in this case small value of m is causing bad hashing hence we dial it to 1e9 + 7 as the prime now it's a good hashing function
+
+other numbers may also be used for example 1e9 + 11 or 1e9 + 9
+or 998244353
+
+NEVER USE SQRT FUNCTION IF POSSIBLE NOT TO OR YOU WILL LOSE PRECISION SINCE IT'S A FLOAT
+say i< (ceil or whatever stuff you do for prime)
+instead do i*i <=n REMEMBER YOU ARE ALLOWED FOR ANY CONDITION OF I DO NOT LIMIT YOURSELF

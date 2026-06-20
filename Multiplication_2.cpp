@@ -30,13 +30,15 @@ int main()
     {
         cout << 0 << "\n";
     }
-// break the conditions into parts (log) log () + log() --> product
+    // break the conditions into parts (log) log () + log() --> product
     else
     {
         for (int j = 0; j < n; j++)
         {
-            if ((int)log10(product)+(int)log10(multi_2[j]) > 18)
-            {
+            if (log10l(product) + log10l(multi_2[j]) > 18 || product * multi_2[j] > (ll)pow(10, 18))
+            { // used long double in order to identify larger numbers and the usual condtiion for smaller which we can't
+                // identify using the log because less precision
+                // i guess that was the only one case which was failing in (after contest)
                 cout << -1 << "\n";
                 break_flag = 1;
                 break;
