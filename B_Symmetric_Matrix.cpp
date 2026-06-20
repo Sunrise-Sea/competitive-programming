@@ -2,18 +2,26 @@
 #define ll long long
 
 using namespace std;
-bool is_symmetric(int matrix[])
+/* bool is_symmetric(int matrix[])
 {
     // for (int i = 0; i < 4; i++)
     // {
     //     cout<<matrix[i]<<"\n";
     // }
-    return 0;
-}
+    if (matrix[1] == matrix[3])
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+
+} */
 int main()
 {
 
-    int t, n, m,flag = 0;
+    int t, n, m, flag = 0;
     cin >> t;
     for (int i = 0; i < t; i++)
     {
@@ -36,13 +44,25 @@ int main()
         {
             for (int is1 = 0; is1 < n; is1++)
             {
-                if (is_symmetric(matrices[is1]))
+                /*                 if (is_symmetric(matrices[is1]))
+                                {
+                                    flag = 1;
+                                    break;
+                                } */
+                // cout<<matrices[is1][1]<<" "<<matrices[is1][3]<<" ";
+                // mistaking 3rd with 3rd index
+                if (matrices[is1][1]==matrices[is1][2])
                 {
                     flag = 1;
-                    break;
                 }
-                
-                
+            }
+            if (flag==1)
+            {
+                cout << "YES" << "\n";
+            }
+            else
+            {
+                cout << "NO" << "\n";
             }
         }
     }
