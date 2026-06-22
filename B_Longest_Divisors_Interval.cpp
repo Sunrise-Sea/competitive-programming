@@ -14,6 +14,7 @@ int main(){
     {
         // n - given number, [l,r] some intervale, i in this is -> N%i=0
         // 990990 =N hence [9,11] hence N%9 = 0 N%10 =0 N%11
+        // if you run a loop until 50 you already get around 4* 1e8 hence not more than 50 times --> this is reverse engineering
         int t;
         cin>>t;
         while (t--)
