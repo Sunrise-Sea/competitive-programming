@@ -14,7 +14,20 @@ int main(){
     {
         // n - given number, [l,r] some intervale, i in this is -> N%i=0
         // 990990 =N hence [9,11] hence N%9 = 0 N%10 =0 N%11
-
+        int t;
+        cin>>t;
+        while (t--)
+        {
+            ll n;
+            cin>>n;
+            int i = 1;
+            while (n%i==0)
+            {
+                i++
+            }
+            cout<<i-1<<"\n";
+        }
+        
     }
     
     
