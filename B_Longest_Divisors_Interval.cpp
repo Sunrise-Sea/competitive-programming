@@ -20,4 +20,4 @@ int main(){
     return 0;
 }
 // what is asked to you also opens up a lot of possibilities, 
-// like they said to print interval not a unique interval hence means there may or may not be another interval
+// like they said to print interval not a unique interval hence means there may or may not be multiple answers.
