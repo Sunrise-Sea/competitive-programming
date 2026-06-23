@@ -16,8 +16,18 @@ int main(){
         remainder = n%3;
         if (remainder==0)
         {
-            
+            cout<<"Second"<<"\n";
         }
+        else if (remainder==1)
+        {
+            cout<<"First"<<"\n";
+        }
+        else if (remainder==2)
+        {
+            cout<<"First"<<"\n";
+        }
+        // think optimally with respect to each player
+        
         
     }
     
