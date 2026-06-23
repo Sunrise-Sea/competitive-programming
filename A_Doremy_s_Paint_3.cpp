@@ -36,26 +36,82 @@ int main()
         }
         else
         {
-            for (int i = 0; i < n - 1; i++)
+            if (n % 2 == 0)
+            {
+                for (int i = 0; i < n - 1; i++)
+                {
+                    if (doremy[i] == doremy[i + 1])
+                    {
+                        if (i < (n / 2) - 1)
+                            small++;
+                        else
+                            larg++;
+                    }
+                }
+                if ((larg == small && larg + small == n - 2) || (larg + small == n - 1 && abs(larg - small) == 1))
+                    cout << "Yes" << "\n";
+                else
+                    cout << "No" << "\n";
+            }
+            else
+            {
+                for (int i = 0; i < n - 1; i++)
+                {
+                    if (doremy[i] == doremy[i + 1])
+                    {
+                        if (i < (n - 1) / 2)
+                        {
+                            small++;
+                        }
+                        else 
+                        {
+                            larg++;
+                        }
+                        // else
+                        // {
+                        //     if (doremy[(n - 1) / 2] == doremy[((n - 1) / 2) - 1] || doremy[(n - 1) / 2] == doremy[((n - 1) / 2) + 1])
+                        //     {
+                        //         odd_sp = 1;
+                        //     }
+                        // }
+                    }
+                }
+                if ((larg + small == n - 2 && abs(larg - small) == 1))
+                {
+                    cout<<"Yes"<<"\n";
+                }
+                else
+                {
+                    cout<<"No"<<"\n";
+                }
+                
+                
+            }
+        }
+    }
+
+    return 0;
+}
+/*             for (int i = 0; i < n - 1; i++)
             {
                 if (doremy[i] == doremy[i + 1])
                 {
                     small++;
-                    if (i == n - 2 && larg == 1 && (small == (n / 2) - 1 || small == (n - 1) / 2 || small == n - 1))
+                    if (i == n - 2 && (small == n  - 1 ))
                     {
-                        larg = 2;
+                        larg++;
                     }
-                    else if (i==n-2 && larg == 0 && small == n - 1)
+                    else if (i == n - 2 && larg == 0 && small == n - 1)
                     {
-                        larg==2;
+                        larg++;
                     }
                 }
                 else
                 {
                     if (small == (n / 2) - 1 || small == (n - 1) / 2)
                     {
-                        small = 0;
-                        larg = 1;
+
+                        larg++;
                     }
                 }
             }
@@ -66,28 +122,22 @@ int main()
             else
             {
                 cout << "No" << "\n";
-            }
+            } */
+/*             for (int j = i + 1; j < n; j++)
+            {
 
-            /*             for (int j = i + 1; j < n; j++)
-                        {
-
-                             if (doremy[i] == doremy[j])
-                            {
-                                doremy[j] = -1;
-                                if (j = n - 1)
-                                {
-                                    doremy[i] = -i;
-                                }
-
-                                small++;
-                            }
-                        } */
-        }
-        /*         for (int i = 0; i < n; i++)
+                 if (doremy[i] == doremy[j])
                 {
-                    cout << doremy[i] << " ";
-                } */
-    }
+                    doremy[j] = -1;
+                    if (j = n - 1)
+                    {
+                        doremy[i] = -i;
+                    }
 
-    return 0;
-}
+                    small++;
+                }
+            } */
+/*         for (int i = 0; i < n; i++)
+        {
+            cout << doremy[i] << " ";
+        } */
