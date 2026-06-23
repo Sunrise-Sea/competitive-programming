@@ -36,7 +36,7 @@ int main()
     cout << s << "\n";
     cout << x << "\n";
     // }
-// 
+// i accidentally created an algorithm wow
 
     return 0;
 }
