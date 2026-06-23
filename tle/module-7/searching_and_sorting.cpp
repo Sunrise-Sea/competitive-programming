@@ -34,9 +34,9 @@ int main()
     cout << indic_s << "\n";
     cout << indic_x << "\n";
     cout << s << "\n";
+    x.append(x);
     cout << x << "\n";
     // }
-// i accidentally created an algorithm wow
 
     return 0;
 }
