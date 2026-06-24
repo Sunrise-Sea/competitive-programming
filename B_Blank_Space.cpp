@@ -9,11 +9,10 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n, travel = 0, zero_check = 0, temp_max_blank = 0, maxblank = 0;
+    int t, n, travel = 0, zero_check = 0, maxblank = 0;
     cin >> t;
     while (t--)
     {
-        temp_max_blank = 0;
         maxblank = 0;
         travel = 0;
         zero_check = 0;
@@ -38,16 +37,42 @@ int main()
                         temp_max_blank = 0;
                     }
                 } */
-        while (travel < n)
+        if (n == 1)
         {
-            if (dingus[travel]==0)
+            if (dingus[0] == 0)
             {
-                zero_check++;
+                cout << "1" << "\n";
             }
-            
+            else
+            {
+                cout << "0" << "\n";
+            }
         }
+        else
+        {
+            while (travel < n)
+            {
+                if (dingus[travel] == 0)
+                {
+                    zero_check++;
+                }
+                else
+                {
+                    if (zero_check > maxblank)
+                        maxblank = zero_check;
+                    zero_check = 0;
+                }
+                if (travel == n - 1 && zero_check > maxblank)
+                {
+                    maxblank = zero_check;
+                    zero_check = 0;
+                }
 
-        cout << maxblank << "\n";
+                travel++;
+            }
+
+            cout << maxblank << "\n";
+        }
     }
 
     return 0;
