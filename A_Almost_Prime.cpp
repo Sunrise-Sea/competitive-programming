@@ -78,8 +78,9 @@ int main()
             }
         }
         divisors == 2 ? almost_primes++ : false;
-        cout << divisors <<" "<< almost_primes << "\n";
+        // cout << divisors <<" "<< almost_primes <<" "<< k<<"\n";
     }
+    cout<<almost_primes<<"\n";
 
     return 0;
 }
