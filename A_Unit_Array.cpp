@@ -29,6 +29,7 @@ int main()
             minus_ones--;
         }
         cout<<moves<<"\n";
+        //solved
     }
 
     return 0;
