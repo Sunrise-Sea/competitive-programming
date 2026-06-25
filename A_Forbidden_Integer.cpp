@@ -9,14 +9,15 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n, k, x, flag = 0, elements = 0;
+    int t, n, k, x, flag = 0, elements = 0, looper = 0;
     cin >> t;
     while (t--)
     {
         cin >> n >> k >> x;
-        flag = 0, elements = 0;
+        flag = 0, elements = 0, looper = 0;
         for (int i = k; i > 0; i--)
         {
+
             if (i == x)
             {
                 continue;
@@ -29,13 +30,21 @@ int main()
                     cout << "YES" << "\n";
                     elements = (int)n / i;
                     n % i != 0 ? elements++ : elements = (int)n / i;
-                    cout<<elements<<"\n";
-                    for (int j = 0; j < (int)n/i; j++)
+                    cout << elements << "\n";
+                    for (int j = 0; j < (int)n / i; j++)
                     {
                         cout << (int)i << " ";
                     }
                     n % i != 0 ? cout << n % i << "\n" : cout << "\n";
                     break;
+                }
+                else
+                {
+                    while (n - looper * i > 0)
+                    {
+                        looper++;
+                        
+                    }
                 }
             }
         }
