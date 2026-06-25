@@ -81,6 +81,7 @@ int main()
         // cout << divisors <<" "<< almost_primes <<" "<< k<<"\n";
     }
     cout<<almost_primes<<"\n";
+    // solved
 
     return 0;
 }
