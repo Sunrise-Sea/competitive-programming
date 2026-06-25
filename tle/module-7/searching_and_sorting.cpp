@@ -2,6 +2,18 @@
 #define ll long long
 
 using namespace std;
+int linear_search(const vector<int>& args,int target){
+    for (int i = 0; i < args.size(); i++)
+    {
+        if (args[i]==target)
+        {
+            return i;
+        }
+        
+    }
+    return -1;
+}
+// optionally we have vector.find() which does linear search (also it's beneficial for only small datasets)
 
 int main()
 {
@@ -13,8 +25,8 @@ int main()
     // cin >> t;
     // for (int i = 0; i < t; i++)
     // {
-    string s, x;
-    cin >> x >> s;
+    string s="yo mama", x="hello";
+    // cin >> x >> s;
     // cout<<s.rfind("hel"); // very useful find -attribute --> Emerald Alert!
     int indic_x = 0;
     int indic_s = 0;
@@ -37,6 +49,10 @@ int main()
     x.append(x);
     cout << x << "\n";
     // }
+    cout<<""<<"\n";
+    cout<<""<<"\n";
+    cout<<""<<"\n";
+
 
     return 0;
 }

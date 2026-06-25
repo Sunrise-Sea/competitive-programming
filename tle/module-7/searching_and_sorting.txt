@@ -6,3 +6,21 @@ The what in Searching
 finding an element - does a specific value exist in a data set
 optimization - what is the maximum minimum value that satisifies a condition
 thresholds
+
+linear search - it involves iterating through each element in the data set sequentially until the target avlue is found
+or the entire data set is traversed
+
+time complexity O(n) where n is the size of dataset
+Space complexity : - O(1) since we don't take any space other than the array/dataset (only iterating on the dataset) and since it's n (constant) hence O(1)
+can't implement on data structures that are not continuous memory block to work on (sequential memory/data)
+non sequential eg trees graphs etc
+works on both sorted and unsorted datasets
+
+binary search
+Question : given a sorted array 'a' of integers, answer 'q' queries of the nature: does qi number exist in the array
+1<=n<=10^5
+1<=a[i]<=10^5
+1<=q<=10^5
+1<=qi<=10^5
+using linear search tc is O(n*q)--> TLE error since 10^10 maximum
+since we need q we can't really optimize it hence we can optimize n
