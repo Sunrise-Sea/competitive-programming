@@ -43,7 +43,7 @@ int main(){
                 cout<<sequence[j+1]<<" ";
             }
         }
-        cout<<"\n";
+        cout<<"\n";//solved
         
 
         
