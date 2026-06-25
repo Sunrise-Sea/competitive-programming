@@ -39,11 +39,11 @@ int main(){
             }
             else
             {
-                cout<<sequence[j+1]<<" ----";
-                // cout<<sequence[j+1]<<" ";
+                cout<<sequence[j+1]<<" ";
+                cout<<sequence[j+1]<<" ";
             }
         }
-        // cout<<"\n";
+        cout<<"\n";
         
 
         
