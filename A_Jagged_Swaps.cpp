@@ -10,7 +10,6 @@ int main()
 
     int t, n, flag = 0;
     cin >> t;
-    cout << "-------------------------" << "\n";
     while (t--)
     {
         cin >> n;
