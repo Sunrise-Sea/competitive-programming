@@ -28,11 +28,17 @@ int main(){
             {
                 charac++;
             }
+            // else
+            // {
+            //     t[i]='-';
+            // }
+            
             
         }
         
     }
     
+        cout<<charac<<"\n";
     
 
     
