@@ -27,7 +27,7 @@ int main(){
             if (t[j] == t[i])
             {
                 charac++;// count the equal chars then subtract it from the total
-                t[i]='-';
+                t[i]='-';// testing with - for equal characters
             }
             // else
             // {
