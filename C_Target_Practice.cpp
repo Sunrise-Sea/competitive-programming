@@ -12,16 +12,30 @@ int main()
     int t;
     cin >> t;
     char aims[10][10];
-    int arrows = 0, misses = 0;
+    int arrows[5][2];
+    memset(arrows, 0, sizeof(arrows));
+    for (int i = 0; i < 5; i++)
+    {
+        arrows[i][0]=i+1;
+    }
+    
     while (t--)
     {
-        arrows = 0, misses = 0;
+        memset(arrows, 0, sizeof(arrows));
         for (int i = 0; i < 10; i++)
         {
             for (int j = 0; j < 10; j++)
             {
                 cin >> aims[i][j];
-                aims[i][j] == 'X' ? arrows++ : misses++;
+                for (int l = 0; l < 5; l++)
+                {
+                    if (((i == l || i == 10 - l) || (j == l || j == 10 - l)) && aims[i][j])
+                    {
+                        arrows[l][1]++;
+                    }
+                }
+
+                // i = 0 or j=0 then arrows 1 mark ++
             }
         }
     }
