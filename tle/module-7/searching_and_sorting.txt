@@ -37,3 +37,5 @@ which makes it log2(n)(we are reducing search space by half each time) tc hence 
 and binary search is not just this
 
 Maths checkpoint
+
+predicate function - basically boolean only outputs for certain conditions
