@@ -33,7 +33,7 @@ int main()
                 cin >> aims[i][j];
                 for (int l = 0; l < 5; l++)
                 {
-                    if (((i == l || i == 10 - l) || (j == l || j == 10 - l)) && aims[i][j] == 'X')
+                    if ((((i == l || i == 9 - l) && l <= j && j <= 9 - l) || ((j == l || j == 9 - l) && l <= i && i <= 9 - l)) && aims[i][j] == 'X')
                     {
                         arrows[l][1]++;
                     }
@@ -45,8 +45,10 @@ int main()
         for (int i = 0; i < 5; i++)
         {
             sum += (arrows[i][1] * arrows[i][0]);
+            // cout << arrows[i][1] << " " << arrows[i][0] << "\n";
         }
-        cout<<sum<<"\n";
+        cout << sum << "\n";
+        // cout << "\n";
     }
 
     return 0;
