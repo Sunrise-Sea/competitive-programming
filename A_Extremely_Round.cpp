@@ -18,7 +18,7 @@ int main()
         while (n / (int)pow(10, i) >= 10)
         {
             flag = 1;
-            numbers+=9;
+            numbers+=9;// if greater than 10 then that means between 10^(i) and 10^(i+1) all available hence add 9 for that
             i++;
         }
         if (!flag)
@@ -27,7 +27,7 @@ int main()
         }
         else
         {
-            numbers+= n/(int)pow(10,i);//
+            numbers+= n/(int)pow(10,i);//add the last place since removing the decimal part will yield the amount of 10^(last power) divisible which yields extrememly round numbers
             cout << numbers << "\n";
         }
     }
