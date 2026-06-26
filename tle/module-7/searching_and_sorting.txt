@@ -39,3 +39,5 @@ and binary search is not just this
 Maths checkpoint
 
 predicate function - basically boolean only outputs for certain conditions
+
+if the answer / target is monotonic predicate in nature then I can use binary search

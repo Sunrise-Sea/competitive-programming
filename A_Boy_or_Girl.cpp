@@ -26,21 +26,17 @@ int main(){
         {
             if (t[j] == t[i])
             {
-                charac++;
+                charac++;// count the equal chars then subtract it from the total
             }
             // else
             // {
             //     t[i]='-';
             // }
-
-            
-            
-            
         }
         
     }
-    
-        cout<<charac<<"\n";
+    // cout<<(t.length()-charac)%2==0? "":""<<"\n"; // just the expression does NOT work you need to enclose the whole thing in brackets
+    cout<<((t.length()-charac)%2==0? "CHAT WITH HER!":"IGNORE HIM!")<<"\n";
     
 
     
