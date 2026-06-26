@@ -21,13 +21,17 @@ int main()
             temp_facts[i] = facts[i];
         }
         sort(temp_facts, temp_facts + n);
-        for (int j = 1; j < n - 1; j++)
+        for (int i = 0; i < 100; i++)
         {
-            if (facts[j] > facts[j - 1] && facts[j] > facts[j + 1])
+            for (int j = 1; j < n - 1; j++)
             {
-                swap(facts[j], facts[j + 1]);
+                if (facts[j] > facts[j - 1] && facts[j] > facts[j + 1])
+                {
+                    swap(facts[j], facts[j + 1]);
+                }
             }
         }
+
         for (int i = 0; i < n; i++)
         {
             if (facts[i] == temp_facts[i])
