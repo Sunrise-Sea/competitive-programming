@@ -46,7 +46,7 @@ int main()
         else
         {
             cout << "NO" << "\n";
-        }
+        }//solved
     }
 
     return 0;
