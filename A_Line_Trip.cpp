@@ -34,6 +34,7 @@ int main()
                 biggest_diff = 2 * (x - gas_stations[n]);
             }
         }
+        cout<<gas_stations[n-1]<<"\n";
         cout << biggest_diff << "\n";
     }
 
