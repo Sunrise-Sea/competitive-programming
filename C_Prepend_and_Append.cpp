@@ -17,17 +17,18 @@ int main()
         cin >> n >> binary;
         while (true)
         {
-            if ((binary[n - 1] == '0' || binary[0] == '1') || (binary[n - 1] == '1' || binary[0] == '0'))
+            if ((binary[n - 1] == '0' && binary[0] == '1') || (binary[n - 1] == '1' && binary[0] == '0'))
             {
                 binary.pop_back();
-                binary.erase(0, 0);
+                binary.erase(0, 1);
             }
             else
             {
                 break;
             }
         }
-        cout<<binary.length()<<"\n";
+                // binary.erase(0, 1);//number of characters to remove after that index start
+        cout << binary.length() << "\n";
     }
 
     return 0;
