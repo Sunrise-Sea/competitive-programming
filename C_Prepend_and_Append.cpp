@@ -17,7 +17,7 @@ int main()
         cin >> n >> binary;
         while (true)
         {
-            if ((binary[n - 1] == '0' || binary[0] == '1') && (binary[n - 1] == '1' || binary[0] == '0'))
+            if ((binary[n - 1] == '0' || binary[0] == '1') || (binary[n - 1] == '1' || binary[0] == '0'))
             {
                 binary.pop_back();
                 binary.erase(0, 0);
@@ -27,7 +27,7 @@ int main()
                 break;
             }
         }
-        cout<<binary<<"\n";
+        cout<<binary.length()<<"\n";
     }
 
     return 0;
