@@ -19,7 +19,7 @@ int main()
         for (int i = 0; i < n; i++)
         {
             cin >> gas_stations[i]; // take the biggest difference between two gas stations and everything else will be covered
-        }
+        } // i literally forgot you have to travel back again
         biggest_diff = gas_stations[0];
         for (int j = 0; j < n - 1; j++)
         {
@@ -27,9 +27,11 @@ int main()
             {
                 biggest_diff = gas_stations[j + 1] - gas_stations[j];
             }
-            else if (biggest_diff < x-gas_stations[n])
+            if (biggest_diff < 2 * (x - gas_stations[n])) // from one gas station to the end then to the last gas station so you refil again hence.....
+            // oh you don't have to subtract 1 5 --> 6 (1 unit) 6-->7 (1 unit) 7-->6(1unit) 6-->5(1 unit) hence 4 units
+            // second case hence 5-->6(1 unit) 6-->5(1unit)
             {
-                biggest_diff = x-gas_stations[n];
+                biggest_diff = 2 * (x - gas_stations[n]);
             }
         }
         cout << biggest_diff << "\n";
