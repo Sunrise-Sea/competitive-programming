@@ -20,8 +20,8 @@ int main()
             // if ((binary[n - 1] == '0' && binary[0] == '1') || (binary[n - 1] == '1' && binary[0] == '0'))
             // {
             // cout << (int)binary.length() << "\n";
-            binary.pop_back();
-            binary.erase(0, 1);
+            // binary.pop_back();// unnecessary since you're just outputting n atp
+            // binary.erase(0, 1);
             n -= 2;
             if (!n)
             {
