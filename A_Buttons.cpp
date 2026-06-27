@@ -20,7 +20,7 @@ int main()
         }
         else if (a==b)
         {
-            if (c%2==0)
+            if (c%2==0)// and this will determine who gets the last turn in case both are equal because a+b is already but we want to know c
             {
                 cout<<"Second"<<"\n";
             }
