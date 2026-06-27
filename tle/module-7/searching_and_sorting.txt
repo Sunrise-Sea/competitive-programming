@@ -57,3 +57,9 @@ cons:  -
 the dataset is required to be sorted before hand
 more complex to implement compared to lnear search 
 not suitable for unsorted datasets without additional preprocessing
+
+eg 
+1 2 4 4 4 5 5 6 10 we want predicate set
+F F T T T T T T T
+because n>=4
+this was the lower bound 
