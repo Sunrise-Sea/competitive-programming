@@ -23,6 +23,11 @@ int main()
             binary.pop_back();
             binary.erase(0, 1);
             n -= 2;
+            if (!n)
+            {
+                break;
+            }
+            
             // forgot to decrease n
             // }
             // else
