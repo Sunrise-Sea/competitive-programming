@@ -15,16 +15,20 @@ int main()
     while (t--)
     {
         cin >> n >> binary;
-        for (int i = 0; i < 2; i++)
+        while ((binary[n - 1] == '0' && binary[0] == '1') || (binary[n - 1] == '1' && binary[0] == '0'))
         {
-            if ((binary[n - 1] == '0' && binary[0] == '1') || (binary[n - 1] == '1' && binary[0] == '0'))
-            {
-                // cout << (int)binary.length() << "\n";
-                binary.pop_back();
-                binary.erase(0, 1);
-                n-=2;
-                // forgot to decrease n
-            }
+            // if ((binary[n - 1] == '0' && binary[0] == '1') || (binary[n - 1] == '1' && binary[0] == '0'))
+            // {
+            // cout << (int)binary.length() << "\n";
+            binary.pop_back();
+            binary.erase(0, 1);
+            n -= 2;
+            // forgot to decrease n
+            // }
+            // else
+            // {
+            //     break;
+            // }
         }
         // binary.erase(0, 1);//number of characters to remove after that index start
         // cout << (int)binary.length() << "\n";
