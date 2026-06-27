@@ -26,7 +26,18 @@ int main()
             // testing to see if this slick method works
             even += (int)(color[i] % 2 == 0);
         }
-        cout<<even<<" "<<n-even<<"\n";//let's devise some condition solely using the number of evens and odds since all we care about is pairity
+        // cout<<even<<" "<<n-even<<"  ";//let's devise some condition solely using the number of evens and odds since all we care about is pairity
+        //hmm odds are the only things that change the pairity so they are the ones that should be needed to be equally distributed
+        //so ig odds%2=0? well let's check this
+        if ((n-even)%2==0)
+        {
+            cout<<"YES"<<"\n";
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+        
         
     }
 
