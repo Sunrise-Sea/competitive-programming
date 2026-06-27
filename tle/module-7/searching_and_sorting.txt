@@ -41,3 +41,12 @@ Maths checkpoint
 predicate function - basically boolean only outputs for certain conditions
 
 if the answer / target is monotonic predicate in nature then I can use binary search
+
+minimize and maximize problems commonly include binary search
+just see whether you can make a predicate function to it
+eg n^2>20 then
+1 2 3 4 5 6 7 8 
+F F F F T T T T
+hence see if 20 less than 6 now I have just 1 to 5 as search space
+do it again and we get 5
+binary searched right now
