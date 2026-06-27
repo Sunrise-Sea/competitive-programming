@@ -27,12 +27,18 @@ int main()
             {
                 biggest_diff = gas_stations[j + 1] - gas_stations[j];
             }
-            if (biggest_diff < 2 * (x - gas_stations[n-1])) // from one gas station to the end then to the last gas station so you refil again hence.....
-            // oh you don't have to subtract 1 5 --> 6 (1 unit) 6-->7 (1 unit) 7-->6(1unit) 6-->5(1 unit) hence 4 units
-            // second case hence 5-->6(1 unit) 6-->5(1unit)
-            {
-                biggest_diff = 2 * (x - gas_stations[n-1]);
-            }
+            /*             if (biggest_diff < 2 * (x - gas_stations[n-1])) // from one gas station to the end then to the last gas station so you refil again hence.....
+                        // oh you don't have to subtract 1 5 --> 6 (1 unit) 6-->7 (1 unit) 7-->6(1unit) 6-->5(1 unit) hence 4 units
+                        // second case hence 5-->6(1 unit) 6-->5(1unit)
+                        {
+                            biggest_diff = 2 * (x - gas_stations[n-1]);
+                        } */
+        }
+        if (biggest_diff < 2 * (x - gas_stations[n - 1])) // from one gas station to the end then to the last gas station so you refil again hence.....
+        // oh you don't have to subtract 1 5 --> 6 (1 unit) 6-->7 (1 unit) 7-->6(1unit) 6-->5(1 unit) hence 4 units
+        // second case hence 5-->6(1 unit) 6-->5(1unit)
+        {
+            biggest_diff = 2 * (x - gas_stations[n - 1]);
         }
         // cout<<gas_stations[n-1]<<"\n";// i literally had n in the index wow
         cout << biggest_diff << "\n";
