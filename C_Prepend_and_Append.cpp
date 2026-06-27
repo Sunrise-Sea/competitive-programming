@@ -42,3 +42,4 @@ int main()
 
     return 0;
 }
+//solved --> ask the AI some questions about improvement every so often
