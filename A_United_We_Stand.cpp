@@ -24,18 +24,25 @@ int main()
             max < unite_us[i] ? max = unite_us[i] : 0;
             min > unite_us[i] ? min = unite_us[i] : 0;
         }
-        if (max == min)
+        for (int i = 0; i < n; i++)// another fix by ai
         {
-            cout << "-1";
+            if (unite_us[i] == max)
+                maxes++;
+        }
+        // if (max == min)
+        if (maxes == n)// another fix by ai
+        {
+            // cout << "-1";
+            cout << -1;// another fix by ai
         }
         else
         {
-            for (int i = 0; i < n; i++)
-            {
-                if (unite_us[i] == max)
-                    maxes++;
-            }
-            cout<<n-maxes<<" "<<maxes<<"\n";
+            // for (int i = 0; i < n; i++)
+            // {
+            //     if (unite_us[i] == max)
+            //         maxes++;
+            // }
+            cout << n - maxes << " " << maxes << "\n";
             for (int i = 0; i < n; i++)
             {
                 if (unite_us[i] != max)
@@ -50,6 +57,6 @@ int main()
         }
         cout << "\n";
     }
-//solved
+    // solved
     return 0;
 }
