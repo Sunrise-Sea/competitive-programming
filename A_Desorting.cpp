@@ -14,7 +14,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n, x, temp_n;
+    int t, n, maxes = 0;
     cin >> t;
     while (t--)
     {
@@ -22,6 +22,7 @@ int main()
         //  so choose such that ai and ai+1 get de-sorted in minimum operations
         //  also check whether there is any instance of de-sorting already
         cin >> n;
+        maxes = 0;
         // trying vectors for the first time;
         vector<int> v;
         // cout<<v.capacity()<<"\n";
@@ -29,9 +30,9 @@ int main()
         // cout<<v.capacity()<<"\n";
         // cout<<v.at(2)<<"\n";
         // for (int i = 0; i < n; i++)
-        Loop(i,0,n)
+        Loop(j, 0, n)
         {
-            cin >> v[i];
+            cin >> v[j];
             // v.PB(v[i]);
         }
         // got this from the book
@@ -44,12 +45,26 @@ int main()
         // {
         //     cout<<v.at(i)<<"\n";
         // }
-        /* for floating point operations (especially ==) 
+        /* for floating point operations (especially ==)
         use abs(a-b)<1e-9
         to account for the rounding errors that occur because of floating point numbers example try doing
         double x = 0.3*3 + 0.1
         */
-
+        Loop(i, 0, n - 1)
+        {
+            if ((v[i + 1] - v[i]) > 0)
+            {
+                if (maxes < (v[i + 1] - v[i]))
+                {
+                    maxes = (v[i + 1] - v[i]);
+                }
+            }
+            else
+            {
+                cout << 0 << "\n";
+                break;
+            }
+        }
         // cout<<v.capacity();
 
         // __int128_t sus = __INTMAX_MAX__;
