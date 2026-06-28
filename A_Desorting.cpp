@@ -14,7 +14,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n, maxes = 0;
+    int t, n, mins;
     cin >> t;
     while (t--)
     {
@@ -22,7 +22,7 @@ int main()
         //  so choose such that ai and ai+1 get de-sorted in minimum operations
         //  also check whether there is any instance of de-sorting already
         cin >> n;
-        maxes = 0;
+        mins = INT_MAX;
         // trying vectors for the first time;
         vector<int> v;
         // cout<<v.capacity()<<"\n";
@@ -52,19 +52,26 @@ int main()
         */
         Loop(i, 0, n - 1)
         {
-            if ((v[i + 1] - v[i]) > 0)
+            if ((v[i + 1] - v[i]) >= 0) // if it's sorted it will have this true
             {
-                if (maxes < (v[i + 1] - v[i]))
+                if (mins > (v[i + 1] - v[i]))
                 {
-                    maxes = (v[i + 1] - v[i]);
+                    mins = (v[i + 1] - v[i]);
                 }
             }
             else
             {
+                mins = -1;
                 cout << 0 << "\n";
                 break;
             }
         }
+        if (mins!=-1)
+        {
+            cout << (mins % 2 == 0 ? mins/2 + 1 : (mins+1)/2) << "\n"; // because in even that could have the possibility of equal and technically that would still be sorted
+            //(mins+1)/2 because we need to makes sure the two minimum difference get reversed instead of just staying equal
+        }
+
         // cout<<v.capacity();
 
         // __int128_t sus = __INTMAX_MAX__;
