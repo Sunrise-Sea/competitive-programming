@@ -36,6 +36,28 @@ int lowerBound(const vector<int> &array, int target)
 
     return result;
 }
+// if there is no lowerbound then there was no first occurence hence 0 occurences 
+int upperBound(const vector<int> &array,int target){
+    int low = 0, high = array.size() - 1, result = -1;
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2;
+        if (array[mid] == target)
+        {
+            result = mid;
+            low = mid + 1;// move the searh to the right side for upper Bound since sorted
+        }
+        else if (array[mid]<target)
+        {
+            low = mid + 1;
+        }
+        else
+        {
+            high = mid-1;//if more then move to left
+        }
+    }
+    return 0;
+}
 // optionally we have vector.find() which does linear search (also it's beneficial for only small datasets)
 
 int main()
