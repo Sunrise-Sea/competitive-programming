@@ -30,6 +30,7 @@ int main()
         }
         cout << (maxes == mins ? 0 : sum - n * mins) << "\n";
     }
+    //solved
 
     return 0;
 }
