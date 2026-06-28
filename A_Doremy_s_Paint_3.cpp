@@ -36,57 +36,57 @@ int main()
         }
         else
         {
-            if (n % 2 == 0)
-            {
-                for (int i = 0; i < n - 1; i++)
-                {
-                    if (doremy[i] == doremy[i + 1])
-                    {
-                        if (i < (n / 2) - 1)
-                            small++;
-                        else
-                            larg++;
-                    }
-                }
-                if ((larg == small && larg + small == n - 2) || (larg + small == n - 1 && abs(larg - small) == 1))
-                    cout << "Yes" << "\n";
-                else
-                    cout << "No" << "\n";
-            }
-            else
-            {
-                for (int i = 0; i < n - 1; i++)
-                {
-                    if (doremy[i] == doremy[i + 1])
-                    {
-                        if (i < (n - 1) / 2)
-                        {
-                            small++;
-                        }
-                        else 
-                        {
-                            larg++;
-                        }
-                        // else
-                        // {
-                        //     if (doremy[(n - 1) / 2] == doremy[((n - 1) / 2) - 1] || doremy[(n - 1) / 2] == doremy[((n - 1) / 2) + 1])
-                        //     {
-                        //         odd_sp = 1;
-                        //     }
-                        // }
-                    }
-                }
-                if ((larg + small == n - 2 && abs(larg - small) == 1))
-                {
-                    cout<<"Yes"<<"\n";
-                }
-                else
-                {
-                    cout<<"No"<<"\n";
-                }
-                
-                
-            }
+            // if (n % 2 == 0)
+            // {
+            //     for (int i = 0; i < n - 1; i++)
+            //     {
+            //         if (doremy[i] == doremy[i + 1])
+            //         {
+            //             if (i < (n / 2) - 1)
+            //                 small++;
+            //             else
+            //                 larg++;
+            //         }
+            //     }
+            //     // if ((larg == small && larg + small == n - 2) || (larg + small == n - 1 && abs(larg - small) == 1))
+            //     if ((larg == small && larg + small == n - 2) || (larg + small == n - 1 ))
+            //         cout << "Yes" << "\n";
+            //     else
+            //         cout << "No" << "\n";
+            // }
+            // else
+            // {
+            //     for (int i = 0; i < n - 1; i++)
+            //     {
+            //         if (doremy[i] == doremy[i + 1])
+            //         {
+            //             if (i < (n - 1) / 2)
+            //             {
+            //                 small++;
+            //             }
+            //             else
+            //             {
+            //                 larg++;
+            //             }
+            //             // else
+            //             // {
+            //             //     if (doremy[(n - 1) / 2] == doremy[((n - 1) / 2) - 1] || doremy[(n - 1) / 2] == doremy[((n - 1) / 2) + 1])
+            //             //     {
+            //             //         odd_sp = 1;
+            //             //     }
+            //             // }
+            //         }
+            //     }
+            //     if ((larg + small == n - 2 && abs(larg - small) == 1))
+            //     {
+            //         cout<<"Yes"<<"\n";
+            //     }
+            //     else
+            //     {
+            //         cout<<"No"<<"\n";
+            //     }
+
+            // }
         }
     }
 
