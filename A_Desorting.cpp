@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
-#define ll long long
+#define ll long long // macros change certain strings in the code to mean the ascertained strings before compilation of the code
+#define PB push_back
+#define Loop(i, a, b) for (int i = a; i < b; i++)
+
 // a 128 bit integer also exists though may not be available in all contest systems
 // printf is usually a bit faster but also difficult to use (like the %d and %f stuff)
 // similar properties for scanf too
@@ -11,7 +14,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t, n,x,temp_n;
+    int t, n, x, temp_n;
     cin >> t;
     while (t--)
     {
@@ -22,12 +25,14 @@ int main()
         // trying vectors for the first time;
         vector<int> v;
         // cout<<v.capacity()<<"\n";
-        v.assign(n,0);
+        v.assign(n, 0);
         // cout<<v.capacity()<<"\n";
         // cout<<v.at(2)<<"\n";
-        for (int i = 0; i < n; i++) {
+        // for (int i = 0; i < n; i++)
+        Loop(i,0,n)
+        {
             cin >> v[i];
-        //     v.push_back(v[i]);
+            // v.PB(v[i]);
         }
         // got this from the book
         // temp_n = n;
@@ -39,7 +44,6 @@ int main()
         // {
         //     cout<<v.at(i)<<"\n";
         // }
-        
 
         // cout<<v.capacity();
 
