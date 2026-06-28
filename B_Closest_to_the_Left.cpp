@@ -21,7 +21,36 @@ int main()
     {
         cin >> queries[j];
     }
+    int low = 0, high = n - 1, result = 0;
+    for (int l = 0; l < k; l++)
+    {
+        low = 0, high = n - 1, result = 0;
+        // queries[l];
+        // binary search is required because 10 power 5 elements hence it wouldn't cmopute
+        // and binary sarch on the array given since it's sorted
+        // and we want the upper bound
+        // int mid = low + (high - low) / 2;
+        while (low <= high)
+        {
+            int mid = low + (high - low) / 2;
+            // if (arrays[mid] == queries[l])
+            if (arrays[mid] == queries[l])
+            {
+                // result = arrays[mid];
+                result = mid;
+                low = mid + 1;
+            }
+            else if (arrays[mid] > queries[l])
+            {
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
+        }
+        cout << result + 1 << "\n";
+    }
 
-    
     return 0;
 }
