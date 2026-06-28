@@ -28,17 +28,19 @@ int main()
             temporary[i] = hello[i];
         }
         sort(temporary, temporary + n);
-        for (int i = 0; i < n; i++)
+        if (temporary[0] != temporary[n - 1])// taking advantage of the sorted thing so I can see whether the entire elements are equal
         {
-            if (temporary[n - 1 - i] == hello[i])
+            for (int i = 0; i < n; i++)
             {
-            flag++;
+                if (temporary[n - 1 - i] == hello[i])
+                {
+                    flag++;
+                }
             }
-            
         }
 
         // if (temporary == hello)
-        if (flag==n)
+        if (flag == n)
         {
             cout << "NO" << "\n";
         }
