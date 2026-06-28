@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #define ll long long
-
+// a 128 bit integer also exists though may not be available in all contest systems
+// printf is usually a bit faster but also difficult to use (like the %d and %f stuff)
+// similar properties for scanf too
 using namespace std;
 
 int main()
@@ -41,6 +43,7 @@ int main()
 
         // cout<<v.capacity();
 
+        // __int128_t sus = __INTMAX_MAX__;
     }
 
     return 0;
