@@ -16,7 +16,7 @@ int main()
     {
         cin >> n;
         // vector<int> hello(n);
-        int hello[n], flag = 0;
+        int hello[n], flag = 0,no_equal_elemes=1;
         for (int i = 0; i < n; i++)
         {
             cin >> hello[i];
@@ -28,7 +28,16 @@ int main()
             temporary[i] = hello[i];
         }
         sort(temporary, temporary + n);
-        if (temporary[0] != temporary[n - 1])// taking advantage of the sorted thing so I can see whether the entire elements are equal
+        for (int l = 0; l < n-1; l++)
+        {
+            if (temporary[l]==temporary[l+1])
+            {
+                no_equal_elemes = 0;
+            }
+            
+        }// if equal elements less amount of operations requried
+        
+        if (temporary[0] != temporary[n - 1]&&no_equal_elemes)// taking advantage of the sorted thing so I can see whether the entire elements are equal
         {
             for (int i = 0; i < n; i++)
             {
