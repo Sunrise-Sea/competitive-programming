@@ -34,22 +34,31 @@ int main()
         {
             int mid = low + (high - low) / 2;
             // if (arrays[mid] == queries[l])
-            if (arrays[mid] == queries[l])
+/*             if (arrays[mid] >= queries[l]) // we wanted the not greater stuff not equal stuff
+            {
+                // result = arrays[mid];
+                result = mid;
+                // low = mid + 1;
+                high = mid - 1;
+            }
+            else
+            { there was a BIG mistake here
+                low = mid + 1;
+            } */
+            if (queries[l] >= arrays[mid]) // we wanted the not greater stuff not equal stuff
             {
                 // result = arrays[mid];
                 result = mid;
                 low = mid + 1;
             }
-            else if (arrays[mid] > queries[l])
-            {
-                high = mid - 1;
-            }
             else
             {
-                low = mid + 1;
+                high = mid - 1;
+                // low = mid + 1;
             }
         }
-        cout << result + 1 << "\n";
+        // cout << (result == 0 ? result : result + 1) << "\n";
+        cout << (result == 0 ? result : result + 1) << "\n";
     }
 
     return 0;
