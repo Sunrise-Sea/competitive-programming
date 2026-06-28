@@ -44,6 +44,11 @@ int main()
         // {
         //     cout<<v.at(i)<<"\n";
         // }
+        /* for floating point operations (especially ==) 
+        use abs(a-b)<1e-9
+        to account for the rounding errors that occur because of floating point numbers example try doing
+        double x = 0.3*3 + 0.1
+        */
 
         // cout<<v.capacity();
 
