@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 // #define ll long long
 // #define Loop(i, a, b) for (int i = a; i < b; i++)
+
 // typedef vector<int> vi;
 // int maximum_find(vi &array, int n);
+using namespace std;
 int maximum_find(int array[], int n)
 {
     int maximum = 0;
@@ -40,7 +42,6 @@ int min2_find(int array[], int n, int min1)
     }
     return min2;
 }
-using namespace std;
 int main()
 {
 
@@ -60,9 +61,15 @@ int main()
         }
         // cout<< maximum_find(hello, n) <<"  ";// testing print
         // cout<< minimum_find(hello, n) <<"  ";// testing print
+        while (k--)
+        {
+            /* code */
+        }
+
         int maxus = maximum_find(hello, n);
         int minumumsus = minimum_find(hello, n);
         int minsus2 = min2_find(hello, n, minumumsus);
+
         // cout<< min2_find(hello, n,minumumsus) <<"\n";// testing print
     }
 
