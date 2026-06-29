@@ -17,7 +17,7 @@ int maximum_find(int array[], int n)
     }
     return maximum;
 }
-int minimum_find(int array[], int n) // actually new idea, just return the 2 min elems sum itself
+int min_sum_find(int array[], int n) // actually new idea, just return the 2 min elems sum itself
 {
     int minimum = INT_MAX;
     for (int i = 0; i < n; i++)
@@ -31,12 +31,12 @@ int minimum_find(int array[], int n) // actually new idea, just return the 2 min
     for (int i = 0; i < n; i++)
     {
         // if (array[i] < min2 && min2 > min1)
-        if (array[i] < min2 && array[i] > min1)
+        if (array[i] < min2 && array[i] > minimum)
         {
             min2 = array[i];
         }
     }
-    return minimum;
+    return minimum + min2;
 }
 // int min2_find(int array[], int n, int min1)
 // {
@@ -54,22 +54,33 @@ int main()
     {
         cin >> n >> k;
         // vi hello(n);
-        int hello[n],sum = 0;
+        int hello[n], sum = 0;
         for (int i = 0; i < n; i++)
         {
             cin >> hello[i];
-            sum +=hello[i];
+            sum += hello[i];
         }
         // cout<< maximum_find(hello, n) <<"  ";// testing print
         // cout<< minimum_find(hello, n) <<"  ";// testing print
         while (k--)
         {
             int maxus = maximum_find(hello, n);
-            int minumumsus = minimum_find(hello, n);
-            int minsus2 = min2_find(hello, n, minumumsus);
-
-
+            int minumumsum = min_sum_find(hello, n);
+            // cout<<maxus<<"  ";
+            // cout<<minumumsum<<"\n";
+            // int minsus2 = min2_find(hello, n, minumumsus);
+            if (maxus>minumumsum)
+            {
+                sum-=minumumsum;
+            }
+            else
+            {
+                sum-=maxus;
+            }
+            
+            
         }
+        cout<<sum<<"\n";
 
         // cout<< min2_find(hello, n,minumumsus) <<"\n";// testing print
     }
