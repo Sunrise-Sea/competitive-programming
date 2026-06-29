@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-// #define ll long long
+#define ll long long
 // #define Loop(i, a, b) for (int i = a; i < b; i++)
 
 // typedef vector<int> vi;
 // int maximum_find(vi &array, int n);
 using namespace std;
-int maximum_find(int array[], int n)
+int maximum_find(ll array[], int n)
 {
     int maximum = 0;
     for (int i = 0; i < n; i++)
@@ -17,9 +17,9 @@ int maximum_find(int array[], int n)
     }
     return maximum;
 }
-int min_sum_find(int array[], int n) // actually new idea, just return the 2 min elems sum itself
+int min_sum_find(ll array[], int n) // actually new idea, just return the 2 min elems sum itself
 {
-    int minimum = INT_MAX;
+    ll minimum = INT_MAX;
     for (int i = 0; i < n; i++)
     {
         if (array[i] < minimum)
@@ -27,7 +27,7 @@ int min_sum_find(int array[], int n) // actually new idea, just return the 2 min
             minimum = array[i];
         }
     }
-    int min2 = INT_MAX;
+    ll min2 = INT_MAX;
     for (int i = 0; i < n; i++)
     {
         // if (array[i] < min2 && min2 > min1)
@@ -54,33 +54,79 @@ int main()
     {
         cin >> n >> k;
         // vi hello(n);
-        int hello[n], sum = 0;
+        vector<ll> hello(n);
+        ll sum = 0;
         for (int i = 0; i < n; i++)
         {
             cin >> hello[i];
-            sum += hello[i];
+            // sum += hello[i];
         }
+        // int temp_n = n;
         // cout<< maximum_find(hello, n) <<"  ";// testing print
         // cout<< minimum_find(hello, n) <<"  ";// testing print
+        /*         while (k--)
+                {
+
+                    ll minimum = INT_MAX;
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (hello[i] < minimum)
+                        {
+                            minimum = hello[i];
+                        }
+                    }
+                    ll min2 = INT_MAX;
+                    for (int i = 0; i < n; i++)
+                    {
+                        // if (hello[i] < min2 && min2 > min1)
+                        if (hello[i] < min2 && hello[i] > minimum)
+                        {
+                            min2 = hello[i];
+                        }
+                    }
+                    ll maxus = maximum_find(hello, n);
+                    ll minumumsum = min_sum_find(hello, n);
+                    // cout<<maxus<<"  ";
+                    // cout<<minumumsum<<"\n";
+                    // int minsus2 = min2_find(hello, n, minumumsus);
+                    if (maxus > minumumsum)
+                    {
+                        sum -= minumumsum;
+                    }
+                    else
+                    {
+                        sum -= maxus;
+                    }
+                } */
+        // actually, no just sort it and get the direct indices, no need for pesky minimums and maxes
+        sort(hello.begin(), hello.end());//learnt this from book
+        // int yes = 0; // all elems are distinc
+        // while (yes < k)
         while (k--)
         {
-            int maxus = maximum_find(hello, n);
-            int minumumsum = min_sum_find(hello, n);
-            // cout<<maxus<<"  ";
-            // cout<<minumumsum<<"\n";
-            // int minsus2 = min2_find(hello, n, minumumsus);
-            if (maxus>minumumsum)
+            if (hello[0] + hello[(0) + 1] < hello[n - 1])
             {
-                sum-=minumumsum;
+                hello.erase(hello.begin());
+                hello.erase(hello.begin());
+                n-=2;
+                // hello[2 * yes] = 0;
+                // hello[(2 * yes) + 1] = 0;
             }
+            // if (hello[2 * yes] + hello[(2 * yes) + 1] >= hello[n - 1 - yes])
             else
             {
-                sum-=maxus;
+                hello.pop_back();
+                n--;
+                // hello[n - 1 ] = 0;
             }
-            
-            
+            // yes++;
         }
-        cout<<sum<<"\n";
+        for (int i = 0; i < n; i++)
+        {
+            sum += hello[i];
+        }
+
+        cout << sum << "\n";
 
         // cout<< min2_find(hello, n,minumumsus) <<"\n";// testing print
     }
