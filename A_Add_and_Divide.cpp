@@ -16,22 +16,32 @@ int main()
     {
         cin >> a >> b;
         int ops = 0;
-        ops += (b == 1 && a!=1);
+        if (b == 1 && a != 1)
+        {
+            b++;
+            ops += 1;
+        }
+        else if (b == a)
+        {
+            ops += 2;
+            b += 2;
+        }
 
         while ((int)(a / b) != 0)
         {
+
             if ((int)(log(a) / log(b)) > (int)(log(a) / log(b + 1)) + ops) // check to see
             {
                 b++;
                 a = (int)(a / b);
                 ops += 2;
-                cout << a << "  --" << "\n";
+                // cout << a << "  --" << "\n";
             }
             else
             {
                 a = (int)(a / b);
                 ops += 1;
-                cout << a << "  -" << "\n";
+                // cout << a << "  -" << "\n";
             }
         }
         cout << ops + 1 << "\n";
