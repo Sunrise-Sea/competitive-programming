@@ -36,14 +36,16 @@ int main()
         else
         {
             cout << abs((int)st.length() - (2 * zeroes)) << "\n";
-            if (ones > zeroes)
+/*             if (ones > zeroes)
             {
                 ones_after = ones - (abs((int)st.length() - (2 * zeroes)));
             }
             else
             {
                 zeroes_after = zeroes - (abs((int)st.length() - (2 * zeroes)));
-            }
+            } */
+           // ok, final idea, since we have to compare from left to right only that means we can just see if we can either have all 1's or all 0's until the position in the modified string, in the original string OR have half 1's and half 0's so that we can swap
+           
         }
         //    cout<<zeroes<<"\n";
 

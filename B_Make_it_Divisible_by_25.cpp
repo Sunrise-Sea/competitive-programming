@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define Loop(i, a, b) for (int i = a; i < b; i++)
+// #define ll long long
+// #define Loop(i, a, b) for (int i = a; i < b; i++)
 
 using namespace std;
 
@@ -13,6 +13,17 @@ int main(){
     cin>>t;
     while(t--)
     {
+        int n;
+        cin>>n;
+        vector <int> zeroes(18);
+        vector <int> fives(18);
+        vector <int> twos(18);
+        vector <int> sevens(18);
+        vector <int> (18);
+        for (int i = 0; i < 18; i++)
+        {
+
+        }
         
     }
     
