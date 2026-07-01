@@ -59,7 +59,7 @@ int main()
                 // cost_1+=(st[l] == '1');
                 // cost_0+=(st[l] == '0');
                 cost++;
-                if (((ones_after ==0 && (zeroes-cost==zeroes_after))|| (zeroes == 0 && (ones-cost==ones_after))|| ones == zeroes)) // if eequality reached then no need to do anything
+                if (((ones_after ==0 && (zeroes-cost==zeroes_after))|| (zeroes_after == 0 && (ones-cost==ones_after))|| ones_after == zeroes_after)) // if eequality reached then no need to do anything
                 // if (zeroes == 0&& (ones-cost==ones_after))// since zeroes reached 0 first hence ones must be max but I'll still check and since cost can have anything deleted hence we're checking ones, ok im not checking it
                 {
                     break;
