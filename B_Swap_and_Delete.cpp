@@ -17,8 +17,8 @@ int main()
     {
         int zeroes = 0, ones = 0;
         int zeroes_after = 0, ones_after = 0;
-        int cost_1 = 0;
-        int cost_0 = 0;
+        // int cost_1 = 0;
+        // int cost_0 = 0;
         int cost = 0;
         cin >> st;
         int n = (int)st.length();
@@ -59,11 +59,27 @@ int main()
                 // cost_1+=(st[l] == '1');
                 // cost_0+=(st[l] == '0');
                 cost++;
-                if (((ones_after ==0 && (zeroes-cost==zeroes_after))|| (zeroes_after == 0 && (ones-cost==ones_after))|| ones_after == zeroes_after)) // if eequality reached then no need to do anything
+                if (((ones_after ==0 && (zeroes-cost==ones_after))|| (zeroes_after == 0 && (ones-cost==zeroes_after))|| ones_after == zeroes_after)) // if eequality reached then no need to do anything
+                // the new and improved (which passed the question test case atleast (DAYUM EMOJIS ARE NOT SUPPORTED LMAO))
                 // if (zeroes == 0&& (ones-cost==ones_after))// since zeroes reached 0 first hence ones must be max but I'll still check and since cost can have anything deleted hence we're checking ones, ok im not checking it
+                // FINAL FINAL : - just have the zeroes after be ones after and vice versa by subtracting maximum
+            // because all we want is a flip of the original (length to be considered) in the aftermath
                 {
                     break;
                 }
+                else
+                {
+                    if ((ones>zeroes)&&(ones-cost == zeroes_after))
+                    {
+                        break;
+                    }
+                    else if ((ones<zeroes)&&(zeroes-cost == ones_after))
+                    {
+                        break;
+                    }
+                    
+                }
+                
             }
             cout << cost << "\n";
         }
@@ -74,4 +90,4 @@ int main()
     }
 
     return 0;
-}
+}//solved
