@@ -17,35 +17,51 @@ int main()
     {
         int zeroes = 0, ones = 0;
         int zeroes_after = 0, ones_after = 0;
+        int cost = 0;
         cin >> st;
+        int n = (int)st.length();
         // vector<int> st(n);
         // for (int i = 0; i < n; i++)
         // {
         //     cin >> st[i];
         //     zeroes += (int)(st[i] == 0);
         // }// it didn't ask for n
-        for (int i = 0; i < (int)st.length(); i++)
+        for (int i = 0; i < (int)n; i++)
         {
             zeroes += (int)(st[i] == '0');
         }
-        ones = (int)st.length() - zeroes;
+        ones = (int)n - zeroes;
         if (zeroes == ones)
         {
             cout << 0 << "\n";
         }
         else
         {
-            cout << abs((int)st.length() - (2 * zeroes)) << "\n";
-/*             if (ones > zeroes)
+            ones_after = ones;
+            zeroes_after = zeroes ;
+            // cout << abs((int)n - (2 * zeroes)) << "\n";
+            /*             if (ones > zeroes)
+                        {
+            ones_after = ones - (abs((int)st.length() - (2 * zeroes)));
+                        }
+                        else
+                        {
+            zeroes_after = zeroes - (abs((int)st.length() - (2 * zeroes)));
+                        } */
+            // ok, final idea, since we have to compare from left to right only that means we can just see if we can either have all 1's or all 0's until the position in the modified string, in the original string OR have half 1's and half 0's so that we can swap
+            // for (int l = 0; l < n; l--)
+            for (int l = n - 1; l >= 0; l--)
             {
-                ones_after = ones - (abs((int)st.length() - (2 * zeroes)));
+                ones_after -= (st[l] == '1');
+                zeroes_after -= (st[l] == '0');
+                cost++;
+                if ((ones ==0 || zeroes == 0 || ones == zeroes))
+                // if (zeroes == 0)
+                {
+                    
+                }
             }
-            else
-            {
-                zeroes_after = zeroes - (abs((int)st.length() - (2 * zeroes)));
-            } */
-           // ok, final idea, since we have to compare from left to right only that means we can just see if we can either have all 1's or all 0's until the position in the modified string, in the original string OR have half 1's and half 0's so that we can swap
-           
+            cout << cost << "\n";
         }
         //    cout<<zeroes<<"\n";
 
