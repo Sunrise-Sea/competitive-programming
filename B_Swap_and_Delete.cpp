@@ -19,6 +19,7 @@ int main()
         int zeroes_after = 0, ones_after = 0;
         int cost_1 = 0;
         int cost_0 = 0;
+        int cost = 0;
         cin >> st;
         int n = (int)st.length();
         // vector<int> st(n);
@@ -57,13 +58,14 @@ int main()
                 zeroes_after -= (st[l] == '0');
                 // cost_1+=(st[l] == '1');
                 // cost_0+=(st[l] == '0');
-                if ((ones ==0 || zeroes == 0 || ones == zeroes)&& (max(ones,zeroes)))
-                // if (zeroes == 0)
+                cost++;
+                if (((ones_after ==0 && (zeroes-cost==zeroes_after))|| (zeroes == 0 && (ones-cost==ones_after))|| ones == zeroes)) // if eequality reached then no need to do anything
+                // if (zeroes == 0&& (ones-cost==ones_after))// since zeroes reached 0 first hence ones must be max but I'll still check and since cost can have anything deleted hence we're checking ones, ok im not checking it
                 {
-                    
+                    break;
                 }
             }
-            cout << cost_1 << "\n";
+            cout << cost << "\n";
         }
         //    cout<<zeroes<<"\n";
 
