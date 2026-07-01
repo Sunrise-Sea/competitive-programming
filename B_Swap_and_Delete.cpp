@@ -17,7 +17,8 @@ int main()
     {
         int zeroes = 0, ones = 0;
         int zeroes_after = 0, ones_after = 0;
-        int cost = 0;
+        int cost_1 = 0;
+        int cost_0 = 0;
         cin >> st;
         int n = (int)st.length();
         // vector<int> st(n);
@@ -54,14 +55,15 @@ int main()
             {
                 ones_after -= (st[l] == '1');
                 zeroes_after -= (st[l] == '0');
-                cost++;
-                if ((ones ==0 || zeroes == 0 || ones == zeroes))
+                // cost_1+=(st[l] == '1');
+                // cost_0+=(st[l] == '0');
+                if ((ones ==0 || zeroes == 0 || ones == zeroes)&& (max(ones,zeroes)))
                 // if (zeroes == 0)
                 {
                     
                 }
             }
-            cout << cost << "\n";
+            cout << cost_1 << "\n";
         }
         //    cout<<zeroes<<"\n";
 
