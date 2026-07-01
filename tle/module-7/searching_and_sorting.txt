@@ -63,3 +63,12 @@ eg
 F F T T T T T T T
 because n>=4
 this was the lower bound 
+
+Selection sort
+it repeatedly selects the smallest element from the unsorted part to the sorted part
+20 12 10 15 2
+now iterating we have 4 index (2) as min we take it and put it in the beginning
+2 20 12 10 15
+now repeat
+
+Insertion sort

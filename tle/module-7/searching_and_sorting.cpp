@@ -58,6 +58,28 @@ int upperBound(const vector<int> &array,int target){
     }
     return 0;
 }
+void selectionSort(vector<int>& arr){
+    int n = arr.size();
+    for (int i = 0; i < n-1; i++)
+    {
+        int minindex =i;//assuming it is lowest then check
+        for (int j = i+1; j < n; j++)
+        {
+            if (arr[j]<arr[minindex])
+            {
+                minindex = j;
+            }
+            
+        }
+        if (minindex!=i)
+        {
+            swap(arr[i], arr[minindex]);
+        }
+        
+        
+    }
+    
+}
 // optionally we have vector.find() which does linear search (also it's beneficial for only small datasets)
 
 int main()
